@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Administrator\Desktop\sy\CPU\CPU.ncd
+OUTFILE=C:\Users\Administrator\Desktop\sy\CPU\CPU.bit
+FAMILY=Spartan3E
+PART=xc3s1200e-4fg320
+WORKINGDIR=C:\Users\Administrator\Desktop\sy\CPU
+LICENSE=WebPack
+USER_INFO=__0_0_0

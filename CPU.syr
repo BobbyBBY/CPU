@@ -1,0 +1,1932 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> WARNING:Xst:1583 - You are using an internal switch '-use_new_parser'.
+WARNING:Xst:3152 - You have chosen to run a version of XST which is not the default solution
+   for the specified device family. You are free to use it in order to take
+   advantage of its enhanced HDL parsing/elaboration capabilities. However,
+   please be aware that you may be impacted by  language support differences.
+   This version may also result in circuit performance and device utilization
+   differences for your particular design. You can always revert back to the
+   default XST solution by setting the "use_new_parser" option to value "no" 
+   on the XST command line or in the XST process properties panel.
+Reading design: CPU.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "CPU.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "CPU"
+Output Format                      : NGC
+Target Device                      : xc3s1200e-4-fg320
+
+---- Source Options
+Use New Parser                     : yes
+Top Module Name                    : CPU
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\Administrator\Desktop\sy\CPU\REGS.vhd" into library work
+Parsing entity <REGS>.
+Parsing architecture <Behavioral> of entity <regs>.
+Parsing VHDL file "C:\Users\Administrator\Desktop\sy\CPU\REGO.vhd" into library work
+Parsing entity <REGO>.
+Parsing architecture <REGOArc> of entity <rego>.
+Parsing VHDL file "C:\Users\Administrator\Desktop\sy\CPU\REGA.vhd" into library work
+Parsing entity <REGA>.
+Parsing architecture <Behavioral> of entity <rega>.
+Parsing VHDL file "C:\Users\Administrator\Desktop\sy\CPU\RAM.vhd" into library work
+Parsing entity <RAM>.
+Parsing architecture <Behavioral> of entity <ram>.
+Parsing VHDL file "C:\Users\Administrator\Desktop\sy\CPU\PC.vhd" into library work
+Parsing entity <PC>.
+Parsing architecture <Behavioral> of entity <pc>.
+Parsing VHDL file "C:\Users\Administrator\Desktop\sy\CPU\MBR.vhd" into library work
+Parsing entity <MBR>.
+Parsing architecture <Behavioral> of entity <mbr>.
+Parsing VHDL file "C:\Users\Administrator\Desktop\sy\CPU\MAR.vhd" into library work
+Parsing entity <MAR>.
+Parsing architecture <Behavioral> of entity <mar>.
+Parsing VHDL file "C:\Users\Administrator\Desktop\sy\CPU\IR.vhd" into library work
+Parsing entity <IR>.
+Parsing architecture <Behavioral> of entity <ir>.
+Parsing VHDL file "C:\Users\Administrator\Desktop\sy\CPU\CU.vhd" into library work
+Parsing entity <CU>.
+Parsing architecture <Behavioral> of entity <cu>.
+Parsing VHDL file "C:\Users\Administrator\Desktop\sy\CPU\ALU.vhd" into library work
+Parsing entity <ALU>.
+Parsing architecture <ALUArc> of entity <alu>.
+Parsing VHDL file "C:\Users\Administrator\Desktop\sy\CPU\CPU.vhd" into library work
+Parsing entity <CPU>.
+Parsing architecture <Behavioral> of entity <cpu>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <CPU> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <CU> (architecture <Behavioral>) from library <work>.
+INFO:HDLCompiler:679 - "C:\Users\Administrator\Desktop\sy\CPU\CU.vhd" Line 143. Case statement is complete. others clause is never selected
+
+Elaborating entity <IR> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <MAR> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <MBR> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <PC> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <RAM> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <REGA> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <REGO> (architecture <REGOArc>) from library <work>.
+
+Elaborating entity <REGS> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <ALU> (architecture <ALUArc>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <CPU>.
+    Related source file is "C:\Users\Administrator\Desktop\sy\CPU\CPU.vhd".
+INFO:Xst:2774 - HDL ADVISOR - KEEP property attached to signal carry_out2<17:16> may hinder XST clustering optimizations.
+    Summary:
+	no macro.
+Unit <CPU> synthesized.
+
+Synthesizing Unit <CU>.
+    Related source file is "C:\Users\Administrator\Desktop\sy\CPU\CU.vhd".
+WARNING:Xst:647 - Input <INPUTIR<10:6>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <INPUTIR<15:14>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <INPUTIR<20:19>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <INPUTIR<25:24>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <CLK>.
+    Found 2-bit register for signal <REGOC>.
+    Found 2-bit register for signal <REGAC>.
+    Found 2-bit register for signal <MARC>.
+    Found 3-bit register for signal <RAMC>.
+    Found 3-bit register for signal <MBRC>.
+    Found 3-bit register for signal <IRC>.
+    Found 3-bit register for signal <ALUC>.
+    Found 5-bit register for signal <REGSC>.
+    Found 3-bit register for signal <stateTerm>.
+    Found 2-bit register for signal <PCC>.
+    Found 5-bit register for signal <state>.
+    Found 7-bit register for signal <led1>.
+    Found 7-bit register for signal <led2>.
+    Found 4-bit register for signal <stateIns>.
+    Found finite state machine <FSM_0> for signal <stateTerm>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 58                                             |
+    | Inputs             | 16                                             |
+    | Outputs            | 10                                             |
+    | Clock              | CLOCK (rising_edge)                            |
+    | Reset              | RST (negative)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 000                                            |
+    | Power Up State     | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_1> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 20                                             |
+    | Transitions        | 396                                            |
+    | Inputs             | 14                                             |
+    | Outputs            | 102                                            |
+    | Clock              | CLOCK (rising_edge)                            |
+    | Reset              | RST (negative)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00000                                          |
+    | Power Up State     | 00000                                          |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred  44 D-type flip-flop(s).
+	inferred  87 Multiplexer(s).
+	inferred   2 Finite State Machine(s).
+Unit <CU> synthesized.
+
+Synthesizing Unit <IR>.
+    Related source file is "C:\Users\Administrator\Desktop\sy\CPU\IR.vhd".
+    Found 16-bit register for signal <romdata<1>>.
+    Found 16-bit register for signal <romdata<2>>.
+    Found 16-bit register for signal <romdata<3>>.
+    Found 16-bit register for signal <romdata<4>>.
+    Found 16-bit register for signal <romdata<5>>.
+    Found 16-bit register for signal <romdata<6>>.
+    Found 16-bit register for signal <romdata<7>>.
+    Found 16-bit register for signal <romdata<8>>.
+    Found 16-bit register for signal <romdata<9>>.
+    Found 16-bit register for signal <romdata<10>>.
+    Found 16-bit register for signal <romdata<11>>.
+    Found 16-bit register for signal <romdata<12>>.
+    Found 16-bit register for signal <romdata<13>>.
+    Found 16-bit register for signal <romdata<14>>.
+    Found 16-bit register for signal <romdata<15>>.
+    Found 16-bit register for signal <romdata<16>>.
+    Found 16-bit register for signal <romdata<17>>.
+    Found 32-bit register for signal <REG>.
+    Found 5-bit register for signal <i>.
+    Found 32-bit register for signal <OUTPUTCU>.
+    Found 16-bit register for signal <OUTPUTIN[15]_dff_59_OUT>.
+    Found 1-bit register for signal <IRC[2]_CLK_DFF_71>.
+    Found 1-bit register for signal <IRC[2]_CLK_DFF_72>.
+    Found 1-bit register for signal <IRC[2]_CLK_DFF_73>.
+    Found 1-bit register for signal <IRC[2]_CLK_DFF_74>.
+    Found 1-bit register for signal <IRC[2]_CLK_DFF_75>.
+    Found 1-bit register for signal <IRC[2]_CLK_DFF_76>.
+    Found 1-bit register for signal <IRC[2]_CLK_DFF_77>.
+    Found 1-bit register for signal <IRC[2]_CLK_DFF_78>.
+    Found 1-bit register for signal <IRC[2]_CLK_DFF_79>.
+    Found 1-bit register for signal <IRC[2]_CLK_DFF_80>.
+    Found 1-bit register for signal <IRC[2]_CLK_DFF_81>.
+    Found 1-bit register for signal <IRC[2]_CLK_DFF_82>.
+    Found 1-bit register for signal <IRC[2]_CLK_DFF_83>.
+    Found 1-bit register for signal <IRC[2]_CLK_DFF_84>.
+    Found 1-bit register for signal <IRC[2]_CLK_DFF_85>.
+    Found 1-bit register for signal <IRC[2]_CLK_DFF_86>.
+    Found 16-bit register for signal <romdata<0>>.
+    Found 5-bit adder for signal <i[4]_GND_9_o_add_3_OUT> created at line 84.
+INFO:Xst:3019 - HDL ADVISOR - 512 flip-flops were inferred for signal <romdata>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+    Found 16-bit 18-to-1 multiplexer for signal <i[4]_X_8_o_wide_mux_2_OUT> created at line 84.
+    Found 1-bit tristate buffer for signal <OUTPUTIN<15>> created at line 51
+    Found 1-bit tristate buffer for signal <OUTPUTIN<14>> created at line 51
+    Found 1-bit tristate buffer for signal <OUTPUTIN<13>> created at line 51
+    Found 1-bit tristate buffer for signal <OUTPUTIN<12>> created at line 51
+    Found 1-bit tristate buffer for signal <OUTPUTIN<11>> created at line 51
+    Found 1-bit tristate buffer for signal <OUTPUTIN<10>> created at line 51
+    Found 1-bit tristate buffer for signal <OUTPUTIN<9>> created at line 51
+    Found 1-bit tristate buffer for signal <OUTPUTIN<8>> created at line 51
+    Found 1-bit tristate buffer for signal <OUTPUTIN<7>> created at line 51
+    Found 1-bit tristate buffer for signal <OUTPUTIN<6>> created at line 51
+    Found 1-bit tristate buffer for signal <OUTPUTIN<5>> created at line 51
+    Found 1-bit tristate buffer for signal <OUTPUTIN<4>> created at line 51
+    Found 1-bit tristate buffer for signal <OUTPUTIN<3>> created at line 51
+    Found 1-bit tristate buffer for signal <OUTPUTIN<2>> created at line 51
+    Found 1-bit tristate buffer for signal <OUTPUTIN<1>> created at line 51
+    Found 1-bit tristate buffer for signal <OUTPUTIN<0>> created at line 51
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred 389 D-type flip-flop(s).
+	inferred  15 Multiplexer(s).
+	inferred  16 Tristate(s).
+Unit <IR> synthesized.
+
+Synthesizing Unit <MAR>.
+    Related source file is "C:\Users\Administrator\Desktop\sy\CPU\MAR.vhd".
+    Found 18-bit register for signal <MARC[1]_dff_3_OUT>.
+    Found 1-bit register for signal <MARC[1]_CLK_DFF_105>.
+    Found 1-bit register for signal <MARC[1]_CLK_DFF_106>.
+    Found 1-bit register for signal <MARC[1]_CLK_DFF_107>.
+    Found 1-bit register for signal <MARC[1]_CLK_DFF_108>.
+    Found 1-bit register for signal <MARC[1]_CLK_DFF_109>.
+    Found 1-bit register for signal <MARC[1]_CLK_DFF_110>.
+    Found 1-bit register for signal <MARC[1]_CLK_DFF_111>.
+    Found 1-bit register for signal <MARC[1]_CLK_DFF_112>.
+    Found 1-bit register for signal <MARC[1]_CLK_DFF_113>.
+    Found 1-bit register for signal <MARC[1]_CLK_DFF_114>.
+    Found 1-bit register for signal <MARC[1]_CLK_DFF_115>.
+    Found 1-bit register for signal <MARC[1]_CLK_DFF_116>.
+    Found 1-bit register for signal <MARC[1]_CLK_DFF_117>.
+    Found 1-bit register for signal <MARC[1]_CLK_DFF_118>.
+    Found 1-bit register for signal <MARC[1]_CLK_DFF_119>.
+    Found 1-bit register for signal <MARC[1]_CLK_DFF_120>.
+    Found 1-bit register for signal <MARC[1]_CLK_DFF_121>.
+    Found 1-bit register for signal <MARC[1]_CLK_DFF_122>.
+    Found 18-bit register for signal <REG>.
+    Found 4x2-bit Read Only RAM for signal <_n0188>
+    Found 1-bit tristate buffer for signal <OUTPUT<17>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<16>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<15>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<14>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<13>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<12>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<11>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<10>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<9>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<8>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<7>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<6>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<5>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<4>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<3>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<2>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<1>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<0>> created at line 43
+    Summary:
+	inferred   1 RAM(s).
+	inferred  54 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+	inferred  18 Tristate(s).
+Unit <MAR> synthesized.
+
+Synthesizing Unit <MBR>.
+    Related source file is "C:\Users\Administrator\Desktop\sy\CPU\MBR.vhd".
+    Found 16-bit register for signal <MBRC[2]_dff_4_OUT>.
+    Found 16-bit register for signal <MBRC[2]_dff_5_OUT>.
+    Found 1-bit register for signal <MBRC[2]_CLK_DFF_123>.
+    Found 1-bit register for signal <MBRC[2]_CLK_DFF_124>.
+    Found 1-bit register for signal <MBRC[2]_CLK_DFF_125>.
+    Found 1-bit register for signal <MBRC[2]_CLK_DFF_126>.
+    Found 1-bit register for signal <MBRC[2]_CLK_DFF_127>.
+    Found 1-bit register for signal <MBRC[2]_CLK_DFF_128>.
+    Found 1-bit register for signal <MBRC[2]_CLK_DFF_129>.
+    Found 1-bit register for signal <MBRC[2]_CLK_DFF_130>.
+    Found 1-bit register for signal <MBRC[2]_CLK_DFF_131>.
+    Found 1-bit register for signal <MBRC[2]_CLK_DFF_132>.
+    Found 1-bit register for signal <MBRC[2]_CLK_DFF_133>.
+    Found 1-bit register for signal <MBRC[2]_CLK_DFF_134>.
+    Found 1-bit register for signal <MBRC[2]_CLK_DFF_135>.
+    Found 1-bit register for signal <MBRC[2]_CLK_DFF_136>.
+    Found 1-bit register for signal <MBRC[2]_CLK_DFF_137>.
+    Found 1-bit register for signal <MBRC[2]_CLK_DFF_138>.
+    Found 1-bit register for signal <MBRC[2]_CLK_DFF_139>.
+    Found 1-bit register for signal <MBRC[2]_CLK_DFF_140>.
+    Found 1-bit register for signal <MBRC[2]_CLK_DFF_141>.
+    Found 1-bit register for signal <MBRC[2]_CLK_DFF_142>.
+    Found 1-bit register for signal <MBRC[2]_CLK_DFF_143>.
+    Found 1-bit register for signal <MBRC[2]_CLK_DFF_144>.
+    Found 1-bit register for signal <MBRC[2]_CLK_DFF_145>.
+    Found 1-bit register for signal <MBRC[2]_CLK_DFF_146>.
+    Found 1-bit register for signal <MBRC[2]_CLK_DFF_147>.
+    Found 1-bit register for signal <MBRC[2]_CLK_DFF_148>.
+    Found 1-bit register for signal <MBRC[2]_CLK_DFF_149>.
+    Found 1-bit register for signal <MBRC[2]_CLK_DFF_150>.
+    Found 1-bit register for signal <MBRC[2]_CLK_DFF_151>.
+    Found 1-bit register for signal <MBRC[2]_CLK_DFF_152>.
+    Found 1-bit register for signal <MBRC[2]_CLK_DFF_153>.
+    Found 1-bit register for signal <MBRC[2]_CLK_DFF_154>.
+    Found 16-bit register for signal <REG>.
+    Found 8x4-bit Read Only RAM for signal <_n0352>
+    Found 1-bit tristate buffer for signal <indata<15>> created at line 44
+    Found 1-bit tristate buffer for signal <indata<14>> created at line 44
+    Found 1-bit tristate buffer for signal <indata<13>> created at line 44
+    Found 1-bit tristate buffer for signal <indata<12>> created at line 44
+    Found 1-bit tristate buffer for signal <indata<11>> created at line 44
+    Found 1-bit tristate buffer for signal <indata<10>> created at line 44
+    Found 1-bit tristate buffer for signal <indata<9>> created at line 44
+    Found 1-bit tristate buffer for signal <indata<8>> created at line 44
+    Found 1-bit tristate buffer for signal <indata<7>> created at line 44
+    Found 1-bit tristate buffer for signal <indata<6>> created at line 44
+    Found 1-bit tristate buffer for signal <indata<5>> created at line 44
+    Found 1-bit tristate buffer for signal <indata<4>> created at line 44
+    Found 1-bit tristate buffer for signal <indata<3>> created at line 44
+    Found 1-bit tristate buffer for signal <indata<2>> created at line 44
+    Found 1-bit tristate buffer for signal <indata<1>> created at line 44
+    Found 1-bit tristate buffer for signal <indata<0>> created at line 44
+    Found 1-bit tristate buffer for signal <outdata<15>> created at line 44
+    Found 1-bit tristate buffer for signal <outdata<14>> created at line 44
+    Found 1-bit tristate buffer for signal <outdata<13>> created at line 44
+    Found 1-bit tristate buffer for signal <outdata<12>> created at line 44
+    Found 1-bit tristate buffer for signal <outdata<11>> created at line 44
+    Found 1-bit tristate buffer for signal <outdata<10>> created at line 44
+    Found 1-bit tristate buffer for signal <outdata<9>> created at line 44
+    Found 1-bit tristate buffer for signal <outdata<8>> created at line 44
+    Found 1-bit tristate buffer for signal <outdata<7>> created at line 44
+    Found 1-bit tristate buffer for signal <outdata<6>> created at line 44
+    Found 1-bit tristate buffer for signal <outdata<5>> created at line 44
+    Found 1-bit tristate buffer for signal <outdata<4>> created at line 44
+    Found 1-bit tristate buffer for signal <outdata<3>> created at line 44
+    Found 1-bit tristate buffer for signal <outdata<2>> created at line 44
+    Found 1-bit tristate buffer for signal <outdata<1>> created at line 44
+    Found 1-bit tristate buffer for signal <outdata<0>> created at line 44
+    Summary:
+	inferred   1 RAM(s).
+	inferred  80 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+	inferred  32 Tristate(s).
+Unit <MBR> synthesized.
+
+Synthesizing Unit <PC>.
+    Related source file is "C:\Users\Administrator\Desktop\sy\CPU\PC.vhd".
+    Found 18-bit register for signal <PCC[1]_dff_4_OUT>.
+    Found 1-bit register for signal <PCC[1]_CLK_DFF_155>.
+    Found 1-bit register for signal <PCC[1]_CLK_DFF_156>.
+    Found 1-bit register for signal <PCC[1]_CLK_DFF_157>.
+    Found 1-bit register for signal <PCC[1]_CLK_DFF_158>.
+    Found 1-bit register for signal <PCC[1]_CLK_DFF_159>.
+    Found 1-bit register for signal <PCC[1]_CLK_DFF_160>.
+    Found 1-bit register for signal <PCC[1]_CLK_DFF_161>.
+    Found 1-bit register for signal <PCC[1]_CLK_DFF_162>.
+    Found 1-bit register for signal <PCC[1]_CLK_DFF_163>.
+    Found 1-bit register for signal <PCC[1]_CLK_DFF_164>.
+    Found 1-bit register for signal <PCC[1]_CLK_DFF_165>.
+    Found 1-bit register for signal <PCC[1]_CLK_DFF_166>.
+    Found 1-bit register for signal <PCC[1]_CLK_DFF_167>.
+    Found 1-bit register for signal <PCC[1]_CLK_DFF_168>.
+    Found 1-bit register for signal <PCC[1]_CLK_DFF_169>.
+    Found 1-bit register for signal <PCC[1]_CLK_DFF_170>.
+    Found 1-bit register for signal <PCC[1]_CLK_DFF_171>.
+    Found 1-bit register for signal <PCC[1]_CLK_DFF_172>.
+    Found 18-bit register for signal <REG>.
+    Found 18-bit adder for signal <REG[17]_GND_144_o_add_0_OUT> created at line 50.
+    Found 4x2-bit Read Only RAM for signal <_n0194>
+    Found 1-bit tristate buffer for signal <OUTPUT<17>> created at line 44
+    Found 1-bit tristate buffer for signal <OUTPUT<16>> created at line 44
+    Found 1-bit tristate buffer for signal <OUTPUT<15>> created at line 44
+    Found 1-bit tristate buffer for signal <OUTPUT<14>> created at line 44
+    Found 1-bit tristate buffer for signal <OUTPUT<13>> created at line 44
+    Found 1-bit tristate buffer for signal <OUTPUT<12>> created at line 44
+    Found 1-bit tristate buffer for signal <OUTPUT<11>> created at line 44
+    Found 1-bit tristate buffer for signal <OUTPUT<10>> created at line 44
+    Found 1-bit tristate buffer for signal <OUTPUT<9>> created at line 44
+    Found 1-bit tristate buffer for signal <OUTPUT<8>> created at line 44
+    Found 1-bit tristate buffer for signal <OUTPUT<7>> created at line 44
+    Found 1-bit tristate buffer for signal <OUTPUT<6>> created at line 44
+    Found 1-bit tristate buffer for signal <OUTPUT<5>> created at line 44
+    Found 1-bit tristate buffer for signal <OUTPUT<4>> created at line 44
+    Found 1-bit tristate buffer for signal <OUTPUT<3>> created at line 44
+    Found 1-bit tristate buffer for signal <OUTPUT<2>> created at line 44
+    Found 1-bit tristate buffer for signal <OUTPUT<1>> created at line 44
+    Found 1-bit tristate buffer for signal <OUTPUT<0>> created at line 44
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  54 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+	inferred  18 Tristate(s).
+Unit <PC> synthesized.
+
+Synthesizing Unit <RAM>.
+    Related source file is "C:\Users\Administrator\Desktop\sy\CPU\RAM.vhd".
+    Found 1-bit register for signal <OE>.
+    Found 1-bit register for signal <WE>.
+    Found 1-bit register for signal <EN>.
+    Found 1-bit register for signal <RAMC[2]_CLK_DFF_177>.
+    Found 1-bit register for signal <RAMC[2]_CLK_DFF_178>.
+    Found 1-bit register for signal <RAMC[2]_CLK_DFF_179>.
+    Found 1-bit register for signal <RAMC[2]_CLK_DFF_180>.
+    Found 1-bit register for signal <RAMC[2]_CLK_DFF_181>.
+    Found 1-bit register for signal <RAMC[2]_CLK_DFF_182>.
+    Found 1-bit register for signal <RAMC[2]_CLK_DFF_183>.
+    Found 1-bit register for signal <RAMC[2]_CLK_DFF_184>.
+    Found 1-bit register for signal <RAMC[2]_CLK_DFF_185>.
+    Found 1-bit register for signal <RAMC[2]_CLK_DFF_186>.
+    Found 1-bit register for signal <RAMC[2]_CLK_DFF_187>.
+    Found 1-bit register for signal <RAMC[2]_CLK_DFF_188>.
+    Found 1-bit register for signal <RAMC[2]_CLK_DFF_189>.
+    Found 1-bit register for signal <RAMC[2]_CLK_DFF_190>.
+    Found 1-bit register for signal <RAMC[2]_CLK_DFF_191>.
+    Found 1-bit register for signal <RAMC[2]_CLK_DFF_192>.
+    Found 16-bit register for signal <RAMC[2]_dff_5_OUT>.
+    Found 8x2-bit Read Only RAM for signal <_n0139>
+    Found 1-bit tristate buffer for signal <data<15>> created at line 46
+    Found 1-bit tristate buffer for signal <data<14>> created at line 46
+    Found 1-bit tristate buffer for signal <data<13>> created at line 46
+    Found 1-bit tristate buffer for signal <data<12>> created at line 46
+    Found 1-bit tristate buffer for signal <data<11>> created at line 46
+    Found 1-bit tristate buffer for signal <data<10>> created at line 46
+    Found 1-bit tristate buffer for signal <data<9>> created at line 46
+    Found 1-bit tristate buffer for signal <data<8>> created at line 46
+    Found 1-bit tristate buffer for signal <data<7>> created at line 46
+    Found 1-bit tristate buffer for signal <data<6>> created at line 46
+    Found 1-bit tristate buffer for signal <data<5>> created at line 46
+    Found 1-bit tristate buffer for signal <data<4>> created at line 46
+    Found 1-bit tristate buffer for signal <data<3>> created at line 46
+    Found 1-bit tristate buffer for signal <data<2>> created at line 46
+    Found 1-bit tristate buffer for signal <data<1>> created at line 46
+    Found 1-bit tristate buffer for signal <data<0>> created at line 46
+    Summary:
+	inferred   1 RAM(s).
+	inferred  35 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+	inferred  16 Tristate(s).
+Unit <RAM> synthesized.
+
+Synthesizing Unit <REGA>.
+    Related source file is "C:\Users\Administrator\Desktop\sy\CPU\REGA.vhd".
+    Found 16-bit register for signal <REGAC[1]_dff_3_OUT>.
+    Found 1-bit register for signal <REGAC[1]_CLK_DFF_193>.
+    Found 1-bit register for signal <REGAC[1]_CLK_DFF_194>.
+    Found 1-bit register for signal <REGAC[1]_CLK_DFF_195>.
+    Found 1-bit register for signal <REGAC[1]_CLK_DFF_196>.
+    Found 1-bit register for signal <REGAC[1]_CLK_DFF_197>.
+    Found 1-bit register for signal <REGAC[1]_CLK_DFF_198>.
+    Found 1-bit register for signal <REGAC[1]_CLK_DFF_199>.
+    Found 1-bit register for signal <REGAC[1]_CLK_DFF_200>.
+    Found 1-bit register for signal <REGAC[1]_CLK_DFF_201>.
+    Found 1-bit register for signal <REGAC[1]_CLK_DFF_202>.
+    Found 1-bit register for signal <REGAC[1]_CLK_DFF_203>.
+    Found 1-bit register for signal <REGAC[1]_CLK_DFF_204>.
+    Found 1-bit register for signal <REGAC[1]_CLK_DFF_205>.
+    Found 1-bit register for signal <REGAC[1]_CLK_DFF_206>.
+    Found 1-bit register for signal <REGAC[1]_CLK_DFF_207>.
+    Found 1-bit register for signal <REGAC[1]_CLK_DFF_208>.
+    Found 16-bit register for signal <REG>.
+    Found 4x2-bit Read Only RAM for signal <_n0169>
+    Found 1-bit tristate buffer for signal <OUTPUT<15>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<14>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<13>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<12>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<11>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<10>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<9>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<8>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<7>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<6>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<5>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<4>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<3>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<2>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<1>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<0>> created at line 43
+    Summary:
+	inferred   1 RAM(s).
+	inferred  48 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+	inferred  16 Tristate(s).
+Unit <REGA> synthesized.
+
+Synthesizing Unit <REGO>.
+    Related source file is "C:\Users\Administrator\Desktop\sy\CPU\REGO.vhd".
+    Found 16-bit register for signal <REGOC[1]_dff_3_OUT>.
+    Found 1-bit register for signal <REGOC[1]_CLK_DFF_209>.
+    Found 1-bit register for signal <REGOC[1]_CLK_DFF_210>.
+    Found 1-bit register for signal <REGOC[1]_CLK_DFF_211>.
+    Found 1-bit register for signal <REGOC[1]_CLK_DFF_212>.
+    Found 1-bit register for signal <REGOC[1]_CLK_DFF_213>.
+    Found 1-bit register for signal <REGOC[1]_CLK_DFF_214>.
+    Found 1-bit register for signal <REGOC[1]_CLK_DFF_215>.
+    Found 1-bit register for signal <REGOC[1]_CLK_DFF_216>.
+    Found 1-bit register for signal <REGOC[1]_CLK_DFF_217>.
+    Found 1-bit register for signal <REGOC[1]_CLK_DFF_218>.
+    Found 1-bit register for signal <REGOC[1]_CLK_DFF_219>.
+    Found 1-bit register for signal <REGOC[1]_CLK_DFF_220>.
+    Found 1-bit register for signal <REGOC[1]_CLK_DFF_221>.
+    Found 1-bit register for signal <REGOC[1]_CLK_DFF_222>.
+    Found 1-bit register for signal <REGOC[1]_CLK_DFF_223>.
+    Found 1-bit register for signal <REGOC[1]_CLK_DFF_224>.
+    Found 16-bit register for signal <REG>.
+    Found 4x2-bit Read Only RAM for signal <_n0169>
+    Found 1-bit tristate buffer for signal <OUTPUT<15>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<14>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<13>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<12>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<11>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<10>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<9>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<8>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<7>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<6>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<5>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<4>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<3>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<2>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<1>> created at line 43
+    Found 1-bit tristate buffer for signal <OUTPUT<0>> created at line 43
+    Summary:
+	inferred   1 RAM(s).
+	inferred  48 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+	inferred  16 Tristate(s).
+Unit <REGO> synthesized.
+
+Synthesizing Unit <REGS>.
+    Related source file is "C:\Users\Administrator\Desktop\sy\CPU\REGS.vhd".
+    Found 8x16-bit single-port RAM <Mram_ramdata> for signal <ramdata>.
+    Found 16-bit register for signal <REGSC[4]_dff_6_OUT>.
+    Found 1-bit register for signal <REGSC[4]_CLK_DFF_225>.
+    Found 1-bit register for signal <REGSC[4]_CLK_DFF_226>.
+    Found 1-bit register for signal <REGSC[4]_CLK_DFF_227>.
+    Found 1-bit register for signal <REGSC[4]_CLK_DFF_228>.
+    Found 1-bit register for signal <REGSC[4]_CLK_DFF_229>.
+    Found 1-bit register for signal <REGSC[4]_CLK_DFF_230>.
+    Found 1-bit register for signal <REGSC[4]_CLK_DFF_231>.
+    Found 1-bit register for signal <REGSC[4]_CLK_DFF_232>.
+    Found 1-bit register for signal <REGSC[4]_CLK_DFF_233>.
+    Found 1-bit register for signal <REGSC[4]_CLK_DFF_234>.
+    Found 1-bit register for signal <REGSC[4]_CLK_DFF_235>.
+    Found 1-bit register for signal <REGSC[4]_CLK_DFF_236>.
+    Found 1-bit register for signal <REGSC[4]_CLK_DFF_237>.
+    Found 1-bit register for signal <REGSC[4]_CLK_DFF_238>.
+    Found 1-bit register for signal <REGSC[4]_CLK_DFF_239>.
+    Found 1-bit register for signal <REGSC[4]_CLK_DFF_240>.
+    Found 16-bit register for signal <led>.
+    Found 4x3-bit Read Only RAM for signal <_n0170>
+    Found 1-bit tristate buffer for signal <DATA<15>> created at line 45
+    Found 1-bit tristate buffer for signal <DATA<14>> created at line 45
+    Found 1-bit tristate buffer for signal <DATA<13>> created at line 45
+    Found 1-bit tristate buffer for signal <DATA<12>> created at line 45
+    Found 1-bit tristate buffer for signal <DATA<11>> created at line 45
+    Found 1-bit tristate buffer for signal <DATA<10>> created at line 45
+    Found 1-bit tristate buffer for signal <DATA<9>> created at line 45
+    Found 1-bit tristate buffer for signal <DATA<8>> created at line 45
+    Found 1-bit tristate buffer for signal <DATA<7>> created at line 45
+    Found 1-bit tristate buffer for signal <DATA<6>> created at line 45
+    Found 1-bit tristate buffer for signal <DATA<5>> created at line 45
+    Found 1-bit tristate buffer for signal <DATA<4>> created at line 45
+    Found 1-bit tristate buffer for signal <DATA<3>> created at line 45
+    Found 1-bit tristate buffer for signal <DATA<2>> created at line 45
+    Found 1-bit tristate buffer for signal <DATA<1>> created at line 45
+    Found 1-bit tristate buffer for signal <DATA<0>> created at line 45
+    Summary:
+	inferred   2 RAM(s).
+	inferred  48 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+	inferred  16 Tristate(s).
+Unit <REGS> synthesized.
+
+Synthesizing Unit <ALU>.
+    Related source file is "C:\Users\Administrator\Desktop\sy\CPU\ALU.vhd".
+    Found 1-bit register for signal <ALUC[2]_CLK_DFF_241>.
+    Found 1-bit register for signal <ALUC[2]_CLK_DFF_242>.
+    Found 1-bit register for signal <ALUC[2]_CLK_DFF_243>.
+    Found 1-bit register for signal <ALUC[2]_CLK_DFF_244>.
+    Found 1-bit register for signal <ALUC[2]_CLK_DFF_245>.
+    Found 1-bit register for signal <ALUC[2]_CLK_DFF_246>.
+    Found 1-bit register for signal <ALUC[2]_CLK_DFF_247>.
+    Found 1-bit register for signal <ALUC[2]_CLK_DFF_248>.
+    Found 1-bit register for signal <ALUC[2]_CLK_DFF_249>.
+    Found 1-bit register for signal <ALUC[2]_CLK_DFF_250>.
+    Found 1-bit register for signal <ALUC[2]_CLK_DFF_251>.
+    Found 1-bit register for signal <ALUC[2]_CLK_DFF_252>.
+    Found 1-bit register for signal <ALUC[2]_CLK_DFF_253>.
+    Found 1-bit register for signal <ALUC[2]_CLK_DFF_254>.
+    Found 1-bit register for signal <ALUC[2]_CLK_DFF_255>.
+    Found 1-bit register for signal <ALUC[2]_CLK_DFF_256>.
+    Found 16-bit register for signal <ALUC[2]_dff_6_OUT>.
+    Found 16-bit adder for signal <INPUTa[15]_INPUTb[15]_add_0_OUT[15:0]> created at line 49.
+    Found 16-bit subtractor for signal <GND_313_o_GND_313_o_sub_2_OUT<15:0>[15:0]> created at line 48.
+    Found 16-bit shifter logical left for signal <INPUTb[15]_INPUTa[10]_shift_left_2_OUT[15:0]> created at line 48
+    Found 16-bit shifter logical left for signal <INPUTb[15]_INPUTa[15]_shift_left_3_OUT[15:0]> created at line 48
+    Found 8x2-bit Read Only RAM for signal <_n0136>
+    Found 16-bit 5-to-1 multiplexer for signal <_n0107> created at line 48.
+    Found 1-bit tristate buffer for signal <OUTPUT<15>> created at line 45
+    Found 1-bit tristate buffer for signal <OUTPUT<14>> created at line 45
+    Found 1-bit tristate buffer for signal <OUTPUT<13>> created at line 45
+    Found 1-bit tristate buffer for signal <OUTPUT<12>> created at line 45
+    Found 1-bit tristate buffer for signal <OUTPUT<11>> created at line 45
+    Found 1-bit tristate buffer for signal <OUTPUT<10>> created at line 45
+    Found 1-bit tristate buffer for signal <OUTPUT<9>> created at line 45
+    Found 1-bit tristate buffer for signal <OUTPUT<8>> created at line 45
+    Found 1-bit tristate buffer for signal <OUTPUT<7>> created at line 45
+    Found 1-bit tristate buffer for signal <OUTPUT<6>> created at line 45
+    Found 1-bit tristate buffer for signal <OUTPUT<5>> created at line 45
+    Found 1-bit tristate buffer for signal <OUTPUT<4>> created at line 45
+    Found 1-bit tristate buffer for signal <OUTPUT<3>> created at line 45
+    Found 1-bit tristate buffer for signal <OUTPUT<2>> created at line 45
+    Found 1-bit tristate buffer for signal <OUTPUT<1>> created at line 45
+    Found 1-bit tristate buffer for signal <OUTPUT<0>> created at line 45
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  32 D-type flip-flop(s).
+	inferred   6 Multiplexer(s).
+	inferred   2 Combinational logic shifter(s).
+	inferred  16 Tristate(s).
+Unit <ALU> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 9
+ 4x2-bit single-port Read Only RAM                     : 4
+ 4x3-bit single-port Read Only RAM                     : 1
+ 8x16-bit single-port RAM                              : 1
+ 8x2-bit single-port Read Only RAM                     : 2
+ 8x4-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 3
+ 16-bit addsub                                         : 1
+ 18-bit adder                                          : 1
+ 5-bit adder                                           : 1
+# Registers                                            : 217
+ 1-bit register                                        : 168
+ 16-bit register                                       : 30
+ 18-bit register                                       : 4
+ 2-bit register                                        : 4
+ 3-bit register                                        : 4
+ 32-bit register                                       : 2
+ 4-bit register                                        : 1
+ 5-bit register                                        : 2
+ 7-bit register                                        : 2
+# Multiplexers                                         : 119
+ 1-bit 2-to-1 multiplexer                              : 15
+ 16-bit 18-to-1 multiplexer                            : 1
+ 16-bit 2-to-1 multiplexer                             : 20
+ 18-bit 2-to-1 multiplexer                             : 4
+ 2-bit 2-to-1 multiplexer                              : 14
+ 3-bit 2-to-1 multiplexer                              : 14
+ 32-bit 2-to-1 multiplexer                             : 3
+ 4-bit 2-to-1 multiplexer                              : 6
+ 5-bit 2-to-1 multiplexer                              : 42
+# Logic shifters                                       : 2
+ 16-bit shifter logical left                           : 2
+# Tristates                                            : 164
+ 1-bit tristate buffer                                 : 164
+# FSMs                                                 : 2
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <IRC[2]_CLK_DFF_71> in Unit <U1> is equivalent to the following 15 FFs/Latches, which will be removed : <IRC[2]_CLK_DFF_72> <IRC[2]_CLK_DFF_73> <IRC[2]_CLK_DFF_74> <IRC[2]_CLK_DFF_75> <IRC[2]_CLK_DFF_76> <IRC[2]_CLK_DFF_77> <IRC[2]_CLK_DFF_78> <IRC[2]_CLK_DFF_79> <IRC[2]_CLK_DFF_80> <IRC[2]_CLK_DFF_81> <IRC[2]_CLK_DFF_82> <IRC[2]_CLK_DFF_83> <IRC[2]_CLK_DFF_84> <IRC[2]_CLK_DFF_85> <IRC[2]_CLK_DFF_86> 
+INFO:Xst:2261 - The FF/Latch <ALUC[2]_CLK_DFF_242> in Unit <U9> is equivalent to the following 15 FFs/Latches, which will be removed : <ALUC[2]_CLK_DFF_241> <ALUC[2]_CLK_DFF_245> <ALUC[2]_CLK_DFF_243> <ALUC[2]_CLK_DFF_244> <ALUC[2]_CLK_DFF_246> <ALUC[2]_CLK_DFF_247> <ALUC[2]_CLK_DFF_250> <ALUC[2]_CLK_DFF_248> <ALUC[2]_CLK_DFF_249> <ALUC[2]_CLK_DFF_253> <ALUC[2]_CLK_DFF_251> <ALUC[2]_CLK_DFF_252> <ALUC[2]_CLK_DFF_256> <ALUC[2]_CLK_DFF_254> <ALUC[2]_CLK_DFF_255> 
+INFO:Xst:2261 - The FF/Latch <REGOC[1]_CLK_DFF_209> in Unit <U7> is equivalent to the following 15 FFs/Latches, which will be removed : <REGOC[1]_CLK_DFF_210> <REGOC[1]_CLK_DFF_211> <REGOC[1]_CLK_DFF_212> <REGOC[1]_CLK_DFF_213> <REGOC[1]_CLK_DFF_214> <REGOC[1]_CLK_DFF_215> <REGOC[1]_CLK_DFF_218> <REGOC[1]_CLK_DFF_216> <REGOC[1]_CLK_DFF_217> <REGOC[1]_CLK_DFF_219> <REGOC[1]_CLK_DFF_220> <REGOC[1]_CLK_DFF_221> <REGOC[1]_CLK_DFF_222> <REGOC[1]_CLK_DFF_223> <REGOC[1]_CLK_DFF_224> 
+INFO:Xst:2261 - The FF/Latch <REGAC[1]_CLK_DFF_193> in Unit <U6> is equivalent to the following 15 FFs/Latches, which will be removed : <REGAC[1]_CLK_DFF_194> <REGAC[1]_CLK_DFF_195> <REGAC[1]_CLK_DFF_196> <REGAC[1]_CLK_DFF_197> <REGAC[1]_CLK_DFF_198> <REGAC[1]_CLK_DFF_199> <REGAC[1]_CLK_DFF_202> <REGAC[1]_CLK_DFF_200> <REGAC[1]_CLK_DFF_201> <REGAC[1]_CLK_DFF_203> <REGAC[1]_CLK_DFF_204> <REGAC[1]_CLK_DFF_205> <REGAC[1]_CLK_DFF_206> <REGAC[1]_CLK_DFF_207> <REGAC[1]_CLK_DFF_208> 
+INFO:Xst:2261 - The FF/Latch <PCC[1]_CLK_DFF_156> in Unit <U4> is equivalent to the following 17 FFs/Latches, which will be removed : <PCC[1]_CLK_DFF_155> <PCC[1]_CLK_DFF_159> <PCC[1]_CLK_DFF_157> <PCC[1]_CLK_DFF_158> <PCC[1]_CLK_DFF_162> <PCC[1]_CLK_DFF_160> <PCC[1]_CLK_DFF_161> <PCC[1]_CLK_DFF_163> <PCC[1]_CLK_DFF_164> <PCC[1]_CLK_DFF_167> <PCC[1]_CLK_DFF_165> <PCC[1]_CLK_DFF_166> <PCC[1]_CLK_DFF_168> <PCC[1]_CLK_DFF_169> <PCC[1]_CLK_DFF_172> <PCC[1]_CLK_DFF_170> <PCC[1]_CLK_DFF_171> 
+INFO:Xst:2261 - The FF/Latch <REGSC[4]_CLK_DFF_225> in Unit <U8> is equivalent to the following 15 FFs/Latches, which will be removed : <REGSC[4]_CLK_DFF_226> <REGSC[4]_CLK_DFF_229> <REGSC[4]_CLK_DFF_227> <REGSC[4]_CLK_DFF_228> <REGSC[4]_CLK_DFF_230> <REGSC[4]_CLK_DFF_231> <REGSC[4]_CLK_DFF_234> <REGSC[4]_CLK_DFF_232> <REGSC[4]_CLK_DFF_233> <REGSC[4]_CLK_DFF_235> <REGSC[4]_CLK_DFF_236> <REGSC[4]_CLK_DFF_237> <REGSC[4]_CLK_DFF_238> <REGSC[4]_CLK_DFF_239> <REGSC[4]_CLK_DFF_240> 
+INFO:Xst:2261 - The FF/Latch <MARC[1]_CLK_DFF_105> in Unit <U2> is equivalent to the following 17 FFs/Latches, which will be removed : <MARC[1]_CLK_DFF_108> <MARC[1]_CLK_DFF_106> <MARC[1]_CLK_DFF_107> <MARC[1]_CLK_DFF_111> <MARC[1]_CLK_DFF_109> <MARC[1]_CLK_DFF_110> <MARC[1]_CLK_DFF_112> <MARC[1]_CLK_DFF_113> <MARC[1]_CLK_DFF_116> <MARC[1]_CLK_DFF_114> <MARC[1]_CLK_DFF_115> <MARC[1]_CLK_DFF_117> <MARC[1]_CLK_DFF_118> <MARC[1]_CLK_DFF_121> <MARC[1]_CLK_DFF_119> <MARC[1]_CLK_DFF_120> <MARC[1]_CLK_DFF_122> 
+INFO:Xst:2261 - The FF/Latch <MBRC[2]_CLK_DFF_141> in Unit <U3> is equivalent to the following 15 FFs/Latches, which will be removed : <MBRC[2]_CLK_DFF_139> <MBRC[2]_CLK_DFF_140> <MBRC[2]_CLK_DFF_142> <MBRC[2]_CLK_DFF_143> <MBRC[2]_CLK_DFF_144> <MBRC[2]_CLK_DFF_145> <MBRC[2]_CLK_DFF_146> <MBRC[2]_CLK_DFF_147> <MBRC[2]_CLK_DFF_150> <MBRC[2]_CLK_DFF_148> <MBRC[2]_CLK_DFF_149> <MBRC[2]_CLK_DFF_151> <MBRC[2]_CLK_DFF_152> <MBRC[2]_CLK_DFF_153> <MBRC[2]_CLK_DFF_154> 
+INFO:Xst:2261 - The FF/Latch <MBRC[2]_CLK_DFF_123> in Unit <U3> is equivalent to the following 15 FFs/Latches, which will be removed : <MBRC[2]_CLK_DFF_124> <MBRC[2]_CLK_DFF_125> <MBRC[2]_CLK_DFF_126> <MBRC[2]_CLK_DFF_127> <MBRC[2]_CLK_DFF_128> <MBRC[2]_CLK_DFF_129> <MBRC[2]_CLK_DFF_132> <MBRC[2]_CLK_DFF_130> <MBRC[2]_CLK_DFF_131> <MBRC[2]_CLK_DFF_133> <MBRC[2]_CLK_DFF_134> <MBRC[2]_CLK_DFF_135> <MBRC[2]_CLK_DFF_136> <MBRC[2]_CLK_DFF_137> <MBRC[2]_CLK_DFF_138> 
+WARNING:Xst:1710 - FF/Latch <romdata_13_6> (without init value) has a constant value of 1 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_13_5> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_13_4> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_13_3> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_13_2> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_13_1> (without init value) has a constant value of 1 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_13_0> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_12_15> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_12_14> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_12_13> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_12_12> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_12_11> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_12_10> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_12_9> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_12_8> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_12_7> (without init value) has a constant value of 1 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_12_6> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_12_5> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_14_8> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_14_7> (without init value) has a constant value of 1 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_14_6> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_14_5> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_14_4> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_14_3> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_14_2> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_14_1> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_14_0> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_13_15> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_13_14> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_13_13> (without init value) has a constant value of 1 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_13_12> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_13_11> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_13_10> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_13_9> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_13_8> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_13_7> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_10_2> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_10_1> (without init value) has a constant value of 1 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_10_0> (without init value) has a constant value of 1 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_9_15> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_9_14> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_9_13> (without init value) has a constant value of 1 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_9_12> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_9_11> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_9_10> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_9_9> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_9_8> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_9_7> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_9_6> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_9_5> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_9_4> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_9_3> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_9_2> (without init value) has a constant value of 1 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_9_1> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_12_4> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_12_3> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_12_2> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_12_1> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_12_0> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_10_15> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_10_14> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_10_13> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_10_12> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_10_11> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_10_10> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_10_9> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_10_8> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_10_7> (without init value) has a constant value of 1 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_10_6> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_10_5> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_10_4> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_10_3> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_17_14> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_17_13> (without init value) has a constant value of 1 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_17_12> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_17_11> (without init value) has a constant value of 1 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_17_10> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_17_9> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_17_8> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_17_7> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_17_6> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_17_5> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_17_4> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_17_3> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_17_2> (without init value) has a constant value of 1 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_17_1> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_17_0> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_16_15> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_16_14> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_16_13> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <EN> (without init value) has a constant value of 0 in block <U5>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_0_15> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_0_14> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_0_13> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_0_12> (without init value) has a constant value of 1 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_0_11> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_0_10> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_0_9> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_0_8> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_0_7> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_0_6> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_0_5> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_0_4> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_0_3> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_0_2> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_0_1> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_0_0> (without init value) has a constant value of 1 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_17_15> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_15_10> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_15_9> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_15_8> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_15_7> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_15_6> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_15_5> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_15_4> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_15_3> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_15_2> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_15_1> (without init value) has a constant value of 1 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_15_0> (without init value) has a constant value of 1 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_14_15> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_14_14> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_14_13> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_14_12> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_14_11> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_14_10> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_14_9> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_16_12> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_16_11> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_16_10> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_16_9> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_16_8> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_16_7> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_16_6> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_16_5> (without init value) has a constant value of 1 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_16_4> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_16_3> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_16_2> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_16_1> (without init value) has a constant value of 1 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_16_0> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_15_15> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_15_14> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_15_13> (without init value) has a constant value of 1 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_15_12> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_15_11> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_4_5> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_4_4> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_4_3> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_4_2> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_4_1> (without init value) has a constant value of 1 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_4_0> (without init value) has a constant value of 1 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_3_15> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_3_14> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_3_13> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_3_12> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_3_11> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_3_10> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_3_9> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_3_8> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_3_7> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_3_6> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_3_5> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_3_4> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_5_7> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_5_6> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_5_5> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_5_4> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_5_3> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_5_2> (without init value) has a constant value of 1 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_5_1> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_5_0> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_4_15> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_4_14> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_4_13> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_4_12> (without init value) has a constant value of 1 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_4_11> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_4_10> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_4_9> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_4_8> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_4_7> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_4_6> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_1_1> (without init value) has a constant value of 1 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_1_0> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_2_15> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_2_14> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_2_13> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_2_12> (without init value) has a constant value of 1 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_2_11> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_2_10> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_2_9> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_2_8> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_2_7> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_2_6> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_2_5> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_2_4> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_2_3> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_2_2> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_2_1> (without init value) has a constant value of 1 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_2_0> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_3_3> (without init value) has a constant value of 1 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_3_2> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_3_1> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_3_0> (without init value) has a constant value of 1 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_1_15> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_1_14> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_1_13> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_1_12> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_1_11> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_1_10> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_1_9> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_1_8> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_1_7> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_1_6> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_1_5> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_1_4> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_1_3> (without init value) has a constant value of 1 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_1_2> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_8_14> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_8_13> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_8_12> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_8_11> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_8_10> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_8_9> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_8_8> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_8_7> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_8_6> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_8_5> (without init value) has a constant value of 1 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_8_4> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_8_3> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_8_2> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_8_1> (without init value) has a constant value of 1 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_8_0> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_7_15> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_7_14> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_7_13> (without init value) has a constant value of 1 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_9_0> (without init value) has a constant value of 1 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_11_15> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_11_14> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_11_13> (without init value) has a constant value of 1 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_11_12> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_11_11> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_11_10> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_11_9> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_11_8> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_11_7> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_11_6> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_11_5> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_11_4> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_11_3> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_11_2> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_11_1> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_11_0> (without init value) has a constant value of 1 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_8_15> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_6_9> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_6_8> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_6_7> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_6_6> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_6_5> (without init value) has a constant value of 1 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_6_4> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_6_3> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_6_2> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_6_1> (without init value) has a constant value of 1 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_6_0> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_5_15> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_5_14> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_5_13> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_5_12> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_5_11> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_5_10> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_5_9> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_5_8> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_7_12> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_7_11> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_7_10> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_7_9> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_7_8> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_7_7> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_7_6> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_7_5> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_7_4> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_7_3> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_7_2> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_7_1> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_7_0> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_6_15> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_6_14> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_6_13> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_6_12> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_6_11> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <romdata_6_10> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <OUTPUTCU_6> of sequential type is unconnected in block <U1>.
+WARNING:Xst:2677 - Node <OUTPUTCU_7> of sequential type is unconnected in block <U1>.
+WARNING:Xst:2677 - Node <OUTPUTCU_8> of sequential type is unconnected in block <U1>.
+WARNING:Xst:2677 - Node <OUTPUTCU_9> of sequential type is unconnected in block <U1>.
+WARNING:Xst:2677 - Node <OUTPUTCU_10> of sequential type is unconnected in block <U1>.
+WARNING:Xst:2677 - Node <OUTPUTCU_14> of sequential type is unconnected in block <U1>.
+WARNING:Xst:2677 - Node <OUTPUTCU_15> of sequential type is unconnected in block <U1>.
+WARNING:Xst:2677 - Node <OUTPUTCU_19> of sequential type is unconnected in block <U1>.
+WARNING:Xst:2677 - Node <OUTPUTCU_20> of sequential type is unconnected in block <U1>.
+WARNING:Xst:2677 - Node <OUTPUTCU_24> of sequential type is unconnected in block <U1>.
+WARNING:Xst:2677 - Node <OUTPUTCU_25> of sequential type is unconnected in block <U1>.
+
+Synthesizing (advanced) Unit <ALU>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0136> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 2-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <ALUC>          |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <ALU> synthesized (advanced).
+
+Synthesizing (advanced) Unit <IR>.
+The following registers are absorbed into counter <i>: 1 register on signal <i>.
+Unit <IR> synthesized (advanced).
+
+Synthesizing (advanced) Unit <MAR>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0188> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 2-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <MARC>          |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <MAR> synthesized (advanced).
+
+Synthesizing (advanced) Unit <MBR>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0352> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 4-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <MBRC>          |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <MBR> synthesized (advanced).
+
+Synthesizing (advanced) Unit <PC>.
+The following registers are absorbed into counter <REG>: 1 register on signal <REG>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0194> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 2-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <PCC>           |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <PC> synthesized (advanced).
+
+Synthesizing (advanced) Unit <RAM>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0139> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 2-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <RAMC>          |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <RAM> synthesized (advanced).
+
+Synthesizing (advanced) Unit <REGA>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0169> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 2-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <REGAC>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <REGA> synthesized (advanced).
+
+Synthesizing (advanced) Unit <REGO>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0169> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 2-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <REGOC>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <REGO> synthesized (advanced).
+
+Synthesizing (advanced) Unit <REGS>.
+INFO:Xst:3231 - The small RAM <Mram_ramdata> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 16-bit                     |          |
+    |     clkA           | connected to signal <CLK>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <REGSC<2:0>>    |          |
+    |     diA            | connected to signal <DATA>          |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0170> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 3-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <REGSC<4:3>>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <REGS> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 9
+ 4x2-bit single-port distributed Read Only RAM         : 4
+ 4x3-bit single-port distributed Read Only RAM         : 1
+ 8x16-bit single-port distributed RAM                  : 1
+ 8x2-bit single-port distributed Read Only RAM         : 2
+ 8x4-bit single-port distributed Read Only RAM         : 1
+# Adders/Subtractors                                   : 1
+ 16-bit addsub                                         : 1
+# Counters                                             : 2
+ 18-bit up counter                                     : 1
+ 5-bit up counter                                      : 1
+# Registers                                            : 809
+ Flip-Flops                                            : 809
+# Multiplexers                                         : 178
+ 1-bit 18-to-1 multiplexer                             : 16
+ 1-bit 2-to-1 multiplexer                              : 64
+ 16-bit 2-to-1 multiplexer                             : 18
+ 18-bit 2-to-1 multiplexer                             : 2
+ 2-bit 2-to-1 multiplexer                              : 14
+ 3-bit 2-to-1 multiplexer                              : 14
+ 32-bit 2-to-1 multiplexer                             : 3
+ 4-bit 2-to-1 multiplexer                              : 6
+ 5-bit 2-to-1 multiplexer                              : 41
+# Logic shifters                                       : 2
+ 16-bit shifter logical left                           : 2
+# FSMs                                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <romdata_13_5> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_13_4> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_13_3> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_13_2> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_13_1> (without init value) has a constant value of 1 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_13_0> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_12_15> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_12_14> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_12_13> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_12_12> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_12_11> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_12_10> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_12_9> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_12_8> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_12_7> (without init value) has a constant value of 1 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_12_6> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_12_5> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_12_4> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_14_7> (without init value) has a constant value of 1 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_14_6> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_14_5> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_14_4> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_14_3> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_14_2> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_14_1> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_14_0> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_13_15> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_13_14> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_13_13> (without init value) has a constant value of 1 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_13_12> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_13_11> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_13_10> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_13_9> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_13_8> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_13_7> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_13_6> (without init value) has a constant value of 1 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_11_1> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_11_0> (without init value) has a constant value of 1 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_10_15> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_10_14> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_10_13> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_10_12> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_10_11> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_10_10> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_10_9> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_10_8> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_10_7> (without init value) has a constant value of 1 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_10_6> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_10_5> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_10_4> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_10_3> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_10_2> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_10_1> (without init value) has a constant value of 1 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_10_0> (without init value) has a constant value of 1 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_12_3> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_12_2> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_12_1> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_12_0> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_11_15> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_11_14> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_11_13> (without init value) has a constant value of 1 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_11_12> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_11_11> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_11_10> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_11_9> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_11_8> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_11_7> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_11_6> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_11_5> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_11_4> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_11_3> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_11_2> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_17_13> (without init value) has a constant value of 1 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_17_12> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_17_11> (without init value) has a constant value of 1 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_17_10> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_17_9> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_17_8> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_17_7> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_17_6> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_17_5> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_17_4> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_17_3> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_17_2> (without init value) has a constant value of 1 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_17_1> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_17_0> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_16_15> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_16_14> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_16_13> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_16_12> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_0_15> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_0_14> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_0_13> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_0_12> (without init value) has a constant value of 1 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_0_11> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_0_10> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_0_9> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_0_8> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_0_7> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_0_6> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_0_5> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_0_4> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_0_3> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_0_2> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_0_1> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_0_0> (without init value) has a constant value of 1 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_17_15> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_17_14> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_15_9> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_15_8> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_15_7> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_15_6> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_15_5> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_15_4> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_15_3> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_15_2> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_15_1> (without init value) has a constant value of 1 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_15_0> (without init value) has a constant value of 1 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_14_15> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_14_14> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_14_13> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_14_12> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_14_11> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_14_10> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_14_9> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_14_8> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_16_11> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_16_10> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_16_9> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_16_8> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_16_7> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_16_6> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_16_5> (without init value) has a constant value of 1 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_16_4> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_16_3> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_16_2> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_16_1> (without init value) has a constant value of 1 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_16_0> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_15_15> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_15_14> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_15_13> (without init value) has a constant value of 1 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_15_12> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_15_11> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_15_10> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_4_5> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_4_4> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_4_3> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_4_2> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_4_1> (without init value) has a constant value of 1 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_4_0> (without init value) has a constant value of 1 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_3_15> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_3_14> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_3_13> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_3_12> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_3_11> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_3_10> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_3_9> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_3_8> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_3_7> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_3_6> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_3_5> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_3_4> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_5_7> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_5_6> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_5_5> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_5_4> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_5_3> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_5_2> (without init value) has a constant value of 1 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_5_1> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_5_0> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_4_15> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_4_14> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_4_13> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_4_12> (without init value) has a constant value of 1 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_4_11> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_4_10> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_4_9> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_4_8> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_4_7> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_4_6> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_1_1> (without init value) has a constant value of 1 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_1_0> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_2_15> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_2_14> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_2_13> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_2_12> (without init value) has a constant value of 1 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_2_11> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_2_10> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_2_9> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_2_8> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_2_7> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_2_6> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_2_5> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_2_4> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_2_3> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_2_2> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_2_1> (without init value) has a constant value of 1 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_2_0> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_3_3> (without init value) has a constant value of 1 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_3_2> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_3_1> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_3_0> (without init value) has a constant value of 1 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_1_15> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_1_14> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_1_13> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_1_12> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_1_11> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_1_10> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_1_9> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_1_8> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_1_7> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_1_6> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_1_5> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_1_4> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_1_3> (without init value) has a constant value of 1 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_1_2> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_8_13> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_8_12> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_8_11> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_8_10> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_8_9> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_8_8> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_8_7> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_8_6> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_8_5> (without init value) has a constant value of 1 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_8_4> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_8_3> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_8_2> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_8_1> (without init value) has a constant value of 1 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_8_0> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_7_15> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_7_14> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_7_13> (without init value) has a constant value of 1 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_7_12> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_9_15> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_9_14> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_9_13> (without init value) has a constant value of 1 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_9_12> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_9_11> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_9_10> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_9_9> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_9_8> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_9_7> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_9_6> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_9_5> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_9_4> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_9_3> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_9_2> (without init value) has a constant value of 1 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_9_1> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_9_0> (without init value) has a constant value of 1 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_8_15> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_8_14> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_6_9> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_6_8> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_6_7> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_6_6> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_6_5> (without init value) has a constant value of 1 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_6_4> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_6_3> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_6_2> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_6_1> (without init value) has a constant value of 1 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_6_0> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_5_15> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_5_14> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_5_13> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_5_12> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_5_11> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_5_10> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_5_9> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_5_8> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_7_11> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_7_10> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_7_9> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_7_8> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_7_7> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_7_6> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_7_5> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_7_4> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_7_3> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_7_2> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_7_1> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_7_0> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_6_15> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_6_14> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_6_13> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_6_12> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_6_11> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <romdata_6_10> (without init value) has a constant value of 0 in block <IR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <EN> (without init value) has a constant value of 0 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <IRC[2]_CLK_DFF_71> in Unit <IR> is equivalent to the following 15 FFs/Latches, which will be removed : <IRC[2]_CLK_DFF_72> <IRC[2]_CLK_DFF_73> <IRC[2]_CLK_DFF_74> <IRC[2]_CLK_DFF_75> <IRC[2]_CLK_DFF_76> <IRC[2]_CLK_DFF_77> <IRC[2]_CLK_DFF_78> <IRC[2]_CLK_DFF_79> <IRC[2]_CLK_DFF_80> <IRC[2]_CLK_DFF_81> <IRC[2]_CLK_DFF_82> <IRC[2]_CLK_DFF_83> <IRC[2]_CLK_DFF_86> <IRC[2]_CLK_DFF_84> <IRC[2]_CLK_DFF_85> 
+INFO:Xst:2261 - The FF/Latch <ALUC[2]_CLK_DFF_242> in Unit <ALU> is equivalent to the following 15 FFs/Latches, which will be removed : <ALUC[2]_CLK_DFF_241> <ALUC[2]_CLK_DFF_245> <ALUC[2]_CLK_DFF_243> <ALUC[2]_CLK_DFF_244> <ALUC[2]_CLK_DFF_246> <ALUC[2]_CLK_DFF_247> <ALUC[2]_CLK_DFF_250> <ALUC[2]_CLK_DFF_248> <ALUC[2]_CLK_DFF_249> <ALUC[2]_CLK_DFF_253> <ALUC[2]_CLK_DFF_251> <ALUC[2]_CLK_DFF_252> <ALUC[2]_CLK_DFF_256> <ALUC[2]_CLK_DFF_254> <ALUC[2]_CLK_DFF_255> 
+INFO:Xst:2261 - The FF/Latch <RAMC[2]_CLK_DFF_177> in Unit <RAM> is equivalent to the following 15 FFs/Latches, which will be removed : <RAMC[2]_CLK_DFF_180> <RAMC[2]_CLK_DFF_178> <RAMC[2]_CLK_DFF_179> <RAMC[2]_CLK_DFF_181> <RAMC[2]_CLK_DFF_182> <RAMC[2]_CLK_DFF_185> <RAMC[2]_CLK_DFF_183> <RAMC[2]_CLK_DFF_184> <RAMC[2]_CLK_DFF_186> <RAMC[2]_CLK_DFF_187> <RAMC[2]_CLK_DFF_188> <RAMC[2]_CLK_DFF_189> <RAMC[2]_CLK_DFF_190> <RAMC[2]_CLK_DFF_191> <RAMC[2]_CLK_DFF_192> 
+INFO:Xst:2261 - The FF/Latch <REGOC[1]_CLK_DFF_209> in Unit <REGO> is equivalent to the following 15 FFs/Latches, which will be removed : <REGOC[1]_CLK_DFF_210> <REGOC[1]_CLK_DFF_211> <REGOC[1]_CLK_DFF_212> <REGOC[1]_CLK_DFF_213> <REGOC[1]_CLK_DFF_214> <REGOC[1]_CLK_DFF_215> <REGOC[1]_CLK_DFF_218> <REGOC[1]_CLK_DFF_216> <REGOC[1]_CLK_DFF_217> <REGOC[1]_CLK_DFF_219> <REGOC[1]_CLK_DFF_220> <REGOC[1]_CLK_DFF_221> <REGOC[1]_CLK_DFF_222> <REGOC[1]_CLK_DFF_223> <REGOC[1]_CLK_DFF_224> 
+INFO:Xst:2261 - The FF/Latch <REGAC[1]_CLK_DFF_193> in Unit <REGA> is equivalent to the following 15 FFs/Latches, which will be removed : <REGAC[1]_CLK_DFF_194> <REGAC[1]_CLK_DFF_195> <REGAC[1]_CLK_DFF_196> <REGAC[1]_CLK_DFF_197> <REGAC[1]_CLK_DFF_198> <REGAC[1]_CLK_DFF_199> <REGAC[1]_CLK_DFF_202> <REGAC[1]_CLK_DFF_200> <REGAC[1]_CLK_DFF_201> <REGAC[1]_CLK_DFF_203> <REGAC[1]_CLK_DFF_204> <REGAC[1]_CLK_DFF_205> <REGAC[1]_CLK_DFF_206> <REGAC[1]_CLK_DFF_207> <REGAC[1]_CLK_DFF_208> 
+INFO:Xst:2261 - The FF/Latch <PCC[1]_CLK_DFF_156> in Unit <PC> is equivalent to the following 17 FFs/Latches, which will be removed : <PCC[1]_CLK_DFF_155> <PCC[1]_CLK_DFF_157> <PCC[1]_CLK_DFF_158> <PCC[1]_CLK_DFF_161> <PCC[1]_CLK_DFF_159> <PCC[1]_CLK_DFF_160> <PCC[1]_CLK_DFF_162> <PCC[1]_CLK_DFF_163> <PCC[1]_CLK_DFF_166> <PCC[1]_CLK_DFF_164> <PCC[1]_CLK_DFF_165> <PCC[1]_CLK_DFF_167> <PCC[1]_CLK_DFF_168> <PCC[1]_CLK_DFF_171> <PCC[1]_CLK_DFF_169> <PCC[1]_CLK_DFF_170> <PCC[1]_CLK_DFF_172> 
+INFO:Xst:2261 - The FF/Latch <REGSC[4]_CLK_DFF_225> in Unit <REGS> is equivalent to the following 15 FFs/Latches, which will be removed : <REGSC[4]_CLK_DFF_226> <REGSC[4]_CLK_DFF_229> <REGSC[4]_CLK_DFF_227> <REGSC[4]_CLK_DFF_228> <REGSC[4]_CLK_DFF_230> <REGSC[4]_CLK_DFF_231> <REGSC[4]_CLK_DFF_234> <REGSC[4]_CLK_DFF_232> <REGSC[4]_CLK_DFF_233> <REGSC[4]_CLK_DFF_235> <REGSC[4]_CLK_DFF_236> <REGSC[4]_CLK_DFF_237> <REGSC[4]_CLK_DFF_238> <REGSC[4]_CLK_DFF_239> <REGSC[4]_CLK_DFF_240> 
+INFO:Xst:2261 - The FF/Latch <MARC[1]_CLK_DFF_105> in Unit <MAR> is equivalent to the following 17 FFs/Latches, which will be removed : <MARC[1]_CLK_DFF_108> <MARC[1]_CLK_DFF_106> <MARC[1]_CLK_DFF_107> <MARC[1]_CLK_DFF_111> <MARC[1]_CLK_DFF_109> <MARC[1]_CLK_DFF_110> <MARC[1]_CLK_DFF_112> <MARC[1]_CLK_DFF_113> <MARC[1]_CLK_DFF_116> <MARC[1]_CLK_DFF_114> <MARC[1]_CLK_DFF_115> <MARC[1]_CLK_DFF_117> <MARC[1]_CLK_DFF_118> <MARC[1]_CLK_DFF_121> <MARC[1]_CLK_DFF_119> <MARC[1]_CLK_DFF_120> <MARC[1]_CLK_DFF_122> 
+INFO:Xst:2261 - The FF/Latch <MBRC[2]_CLK_DFF_141> in Unit <MBR> is equivalent to the following 15 FFs/Latches, which will be removed : <MBRC[2]_CLK_DFF_139> <MBRC[2]_CLK_DFF_140> <MBRC[2]_CLK_DFF_142> <MBRC[2]_CLK_DFF_143> <MBRC[2]_CLK_DFF_144> <MBRC[2]_CLK_DFF_145> <MBRC[2]_CLK_DFF_146> <MBRC[2]_CLK_DFF_147> <MBRC[2]_CLK_DFF_150> <MBRC[2]_CLK_DFF_148> <MBRC[2]_CLK_DFF_149> <MBRC[2]_CLK_DFF_151> <MBRC[2]_CLK_DFF_152> <MBRC[2]_CLK_DFF_153> <MBRC[2]_CLK_DFF_154> 
+INFO:Xst:2261 - The FF/Latch <MBRC[2]_CLK_DFF_123> in Unit <MBR> is equivalent to the following 15 FFs/Latches, which will be removed : <MBRC[2]_CLK_DFF_124> <MBRC[2]_CLK_DFF_125> <MBRC[2]_CLK_DFF_126> <MBRC[2]_CLK_DFF_127> <MBRC[2]_CLK_DFF_128> <MBRC[2]_CLK_DFF_129> <MBRC[2]_CLK_DFF_132> <MBRC[2]_CLK_DFF_130> <MBRC[2]_CLK_DFF_131> <MBRC[2]_CLK_DFF_133> <MBRC[2]_CLK_DFF_134> <MBRC[2]_CLK_DFF_135> <MBRC[2]_CLK_DFF_136> <MBRC[2]_CLK_DFF_137> <MBRC[2]_CLK_DFF_138> 
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <U0/FSM_1> on signal <state[1:5]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00000 | 00000
+ 00001 | 00001
+ 00010 | 00010
+ 00011 | 00011
+ 00100 | 00100
+ 00101 | 00101
+ 00110 | 00110
+ 00111 | 00111
+ 01000 | 01000
+ 01001 | 01001
+ 01010 | 01010
+ 01011 | 01011
+ 01100 | 01100
+ 01101 | 01101
+ 01110 | 01110
+ 01111 | 01111
+ 10000 | 10000
+ 10001 | 10001
+ 10010 | 10010
+ 10011 | 10011
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <U0/FSM_0> on signal <stateTerm[1:3]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 010   | 011
+ 011   | 010
+ 100   | 110
+ 101   | 111
+-------------------
+INFO:Xst:2261 - The FF/Latch <led1_0> in Unit <CU> is equivalent to the following FF/Latch, which will be removed : <led1_3> 
+WARNING:Xst:2042 - Unit CPU: 18 internal tristates are replaced by logic (pull-up yes): N10, N11, N12, N13, N14, N15, N16, N17, N18, N19, N2, N3, N4, N5, N6, N7, N8, N9.
+WARNING:Xst:2040 - Unit CPU: 16 multi-source signals are replaced by logic (pull-up yes): carry_out2<0>, carry_out2<10>, carry_out2<11>, carry_out2<12>, carry_out2<13>, carry_out2<14>, carry_out2<15>, carry_out2<1>, carry_out2<2>, carry_out2<3>, carry_out2<4>, carry_out2<5>, carry_out2<6>, carry_out2<7>, carry_out2<8>, carry_out2<9>.
+WARNING:Xst:2042 - Unit REGS: 16 internal tristates are replaced by logic (pull-up yes): DATA<0>, DATA<10>, DATA<11>, DATA<12>, DATA<13>, DATA<14>, DATA<15>, DATA<1>, DATA<2>, DATA<3>, DATA<4>, DATA<5>, DATA<6>, DATA<7>, DATA<8>, DATA<9>.
+WARNING:Xst:2042 - Unit PC: 18 internal tristates are replaced by logic (pull-up yes): OUTPUT<0>, OUTPUT<10>, OUTPUT<11>, OUTPUT<12>, OUTPUT<13>, OUTPUT<14>, OUTPUT<15>, OUTPUT<16>, OUTPUT<17>, OUTPUT<1>, OUTPUT<2>, OUTPUT<3>, OUTPUT<4>, OUTPUT<5>, OUTPUT<6>, OUTPUT<7>, OUTPUT<8>, OUTPUT<9>.
+WARNING:Xst:2042 - Unit REGA: 16 internal tristates are replaced by logic (pull-up yes): OUTPUT<0>, OUTPUT<10>, OUTPUT<11>, OUTPUT<12>, OUTPUT<13>, OUTPUT<14>, OUTPUT<15>, OUTPUT<1>, OUTPUT<2>, OUTPUT<3>, OUTPUT<4>, OUTPUT<5>, OUTPUT<6>, OUTPUT<7>, OUTPUT<8>, OUTPUT<9>.
+WARNING:Xst:2042 - Unit REGO: 16 internal tristates are replaced by logic (pull-up yes): OUTPUT<0>, OUTPUT<10>, OUTPUT<11>, OUTPUT<12>, OUTPUT<13>, OUTPUT<14>, OUTPUT<15>, OUTPUT<1>, OUTPUT<2>, OUTPUT<3>, OUTPUT<4>, OUTPUT<5>, OUTPUT<6>, OUTPUT<7>, OUTPUT<8>, OUTPUT<9>.
+WARNING:Xst:2042 - Unit RAM: 16 internal tristates are replaced by logic (pull-up yes): data<0>, data<10>, data<11>, data<12>, data<13>, data<14>, data<15>, data<1>, data<2>, data<3>, data<4>, data<5>, data<6>, data<7>, data<8>, data<9>.
+WARNING:Xst:2042 - Unit ALU: 16 internal tristates are replaced by logic (pull-up yes): OUTPUT<0>, OUTPUT<10>, OUTPUT<11>, OUTPUT<12>, OUTPUT<13>, OUTPUT<14>, OUTPUT<15>, OUTPUT<1>, OUTPUT<2>, OUTPUT<3>, OUTPUT<4>, OUTPUT<5>, OUTPUT<6>, OUTPUT<7>, OUTPUT<8>, OUTPUT<9>.
+WARNING:Xst:2042 - Unit IR: 16 internal tristates are replaced by logic (pull-up yes): OUTPUTIN<0>, OUTPUTIN<10>, OUTPUTIN<11>, OUTPUTIN<12>, OUTPUTIN<13>, OUTPUTIN<14>, OUTPUTIN<15>, OUTPUTIN<1>, OUTPUTIN<2>, OUTPUTIN<3>, OUTPUTIN<4>, OUTPUTIN<5>, OUTPUTIN<6>, OUTPUTIN<7>, OUTPUTIN<8>, OUTPUTIN<9>.
+
+Optimizing unit <CPU> ...
+
+Optimizing unit <CU> ...
+
+Optimizing unit <ALU> ...
+
+Optimizing unit <RAM> ...
+WARNING:Xst:1710 - FF/Latch <data_0> (without init value) has a constant value of 1 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_1> (without init value) has a constant value of 1 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_2> (without init value) has a constant value of 1 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_3> (without init value) has a constant value of 1 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_4> (without init value) has a constant value of 1 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_5> (without init value) has a constant value of 1 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_6> (without init value) has a constant value of 1 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_7> (without init value) has a constant value of 1 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_8> (without init value) has a constant value of 1 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_9> (without init value) has a constant value of 1 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_10> (without init value) has a constant value of 1 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_11> (without init value) has a constant value of 1 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_12> (without init value) has a constant value of 1 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_13> (without init value) has a constant value of 1 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_14> (without init value) has a constant value of 1 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_15> (without init value) has a constant value of 1 in block <RAM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <RAMC[2]_CLK_DFF_177> is unconnected in block <RAM>.
+
+Optimizing unit <REGA> ...
+WARNING:Xst:2677 - Node <U1/OUTPUTCU_25> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <U1/OUTPUTCU_24> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <U1/OUTPUTCU_20> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <U1/OUTPUTCU_19> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <U1/OUTPUTCU_15> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <U1/OUTPUTCU_14> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <U1/OUTPUTCU_10> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <U1/OUTPUTCU_9> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <U1/OUTPUTCU_8> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <U1/OUTPUTCU_7> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <U1/OUTPUTCU_6> of sequential type is unconnected in block <CPU>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block CPU, actual ratio is 6.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 368
+ Flip-Flops                                            : 368
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : CPU.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1137
+#      GND                         : 1
+#      INV                         : 8
+#      LUT2                        : 118
+#      LUT2_D                      : 22
+#      LUT2_L                      : 3
+#      LUT3                        : 221
+#      LUT3_D                      : 20
+#      LUT3_L                      : 13
+#      LUT4                        : 495
+#      LUT4_D                      : 29
+#      LUT4_L                      : 74
+#      MUXCY                       : 32
+#      MUXF5                       : 66
+#      VCC                         : 1
+#      XORCY                       : 34
+# FlipFlops/Latches                : 368
+#      FD                          : 164
+#      FDC                         : 10
+#      FDCE                        : 7
+#      FDE                         : 148
+#      FDP                         : 11
+#      FDPE                        : 23
+#      FDRE                        : 5
+# RAMS                             : 16
+#      RAM16X1S                    : 16
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 70
+#      IBUF                        : 2
+#      IOBUF                       : 16
+#      OBUF                        : 34
+#      OBUFT                       : 18
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s1200efg320-4 
+
+ Number of Slices:                      569  out of   8672     6%  
+ Number of Slice Flip Flops:            366  out of  17344     2%  
+ Number of 4 input LUTs:               1019  out of  17344     5%  
+    Number used as logic:              1003
+    Number used as RAMs:                 16
+ Number of IOs:                          87
+ Number of bonded IOBs:                  71  out of    250    28%  
+    IOB Flip Flops:                       2
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+U0/CLK                             | BUFG                   | 333   |
+CLOCKCPU                           | BUFGP                  | 51    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+U0/RST_inv(U0/RST_inv1_INV_0:O)    | NONE(U0/led2_5)        | 51    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 11.970ns (Maximum Frequency: 83.542MHz)
+   Minimum input arrival time before clock: 6.569ns
+   Maximum output required time after clock: 6.720ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U0/CLK'
+  Clock period: 11.970ns (frequency: 83.542MHz)
+  Total number of paths / destination ports: 11191 / 322
+-------------------------------------------------------------------------
+Delay:               11.970ns (Levels of Logic = 22)
+  Source:            U7/REGOC[1]_CLK_DFF_209 (FF)
+  Destination:       U9/OUTPUT_15 (FF)
+  Source Clock:      U0/CLK rising
+  Destination Clock: U0/CLK rising
+
+  Data Path: U7/REGOC[1]_CLK_DFF_209 to U9/OUTPUT_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             17   0.591   1.226  U7/REGOC[1]_CLK_DFF_209 (U7/REGOC[1]_CLK_DFF_209)
+     LUT2_D:I0->O          1   0.704   0.424  carry_out2<15>LogicTrst19 (carry_out2<0>LogicTrst19)
+     LUT4_D:I3->O         13   0.704   0.987  carry_out2<15>LogicTrst24_1 (carry_out2<15>LogicTrst24)
+     LUT4:I3->O           23   0.704   1.237  carry_out2<0>LogicTrst40 (carry_out2<0>)
+     LUT3:I2->O            1   0.704   0.000  U9/Mmux__n01071_rs_lut<0> (U9/Mmux__n01071_rs_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  U9/Mmux__n01071_rs_cy<0> (U9/Mmux__n01071_rs_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  U9/Mmux__n01071_rs_cy<1> (U9/Mmux__n01071_rs_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  U9/Mmux__n01071_rs_cy<2> (U9/Mmux__n01071_rs_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  U9/Mmux__n01071_rs_cy<3> (U9/Mmux__n01071_rs_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  U9/Mmux__n01071_rs_cy<4> (U9/Mmux__n01071_rs_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  U9/Mmux__n01071_rs_cy<5> (U9/Mmux__n01071_rs_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  U9/Mmux__n01071_rs_cy<6> (U9/Mmux__n01071_rs_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  U9/Mmux__n01071_rs_cy<7> (U9/Mmux__n01071_rs_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  U9/Mmux__n01071_rs_cy<8> (U9/Mmux__n01071_rs_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  U9/Mmux__n01071_rs_cy<9> (U9/Mmux__n01071_rs_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  U9/Mmux__n01071_rs_cy<10> (U9/Mmux__n01071_rs_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  U9/Mmux__n01071_rs_cy<11> (U9/Mmux__n01071_rs_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  U9/Mmux__n01071_rs_cy<12> (U9/Mmux__n01071_rs_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  U9/Mmux__n01071_rs_cy<13> (U9/Mmux__n01071_rs_cy<13>)
+     MUXCY:CI->O           0   0.059   0.000  U9/Mmux__n01071_rs_cy<14> (U9/Mmux__n01071_rs_cy<14>)
+     XORCY:CI->O           1   0.804   0.420  U9/Mmux__n01071_rs_xor<15> (U9/Mmux__n01071_split<15>)
+     MUXF5:S->O            1   0.739   0.424  U9/Mmux_n00991422_SW0 (N234)
+     LUT4:I3->O            1   0.704   0.000  U9/Mmux_n00991499 (U9/Mmux_n00991499)
+     FD:D                      0.308          U9/OUTPUT_15
+    ----------------------------------------
+    Total                     11.970ns (7.252ns logic, 4.718ns route)
+                                       (60.6% logic, 39.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLOCKCPU'
+  Clock period: 9.281ns (frequency: 107.750MHz)
+  Total number of paths / destination ports: 2163 / 77
+-------------------------------------------------------------------------
+Delay:               9.281ns (Levels of Logic = 6)
+  Source:            U0/state_FSM_FFd2 (FF)
+  Destination:       U0/MARC_1 (FF)
+  Source Clock:      CLOCKCPU rising
+  Destination Clock: CLOCKCPU rising
+
+  Data Path: U0/state_FSM_FFd2 to U0/MARC_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q            116   0.591   1.464  U0/state_FSM_FFd2 (U0/state_FSM_FFd2)
+     LUT4_D:I0->O          3   0.704   0.566  U0/_n1092<3>1 (U0/_n1092)
+     LUT4:I2->O            2   0.704   0.482  U0/_n1357_inv10 (U0/_n1357_inv10)
+     LUT4:I2->O            1   0.704   0.424  U0/_n1357_inv20_SW0 (N466)
+     LUT4_L:I3->LO         1   0.704   0.104  U0/_n1357_inv20 (U0/_n1357_inv20)
+     LUT4:I3->O            1   0.704   0.424  U0/_n1357_inv181 (U0/_n1357_inv181)
+     LUT4:I3->O            2   0.704   0.447  U0/_n1357_inv212 (U0/_n1357_inv212)
+     FDPE:CE                   0.555          U0/MARC_0
+    ----------------------------------------
+    Total                      9.281ns (5.370ns logic, 3.911ns route)
+                                       (57.9% logic, 42.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'U0/CLK'
+  Total number of paths / destination ports: 177 / 97
+-------------------------------------------------------------------------
+Offset:              6.569ns (Levels of Logic = 4)
+  Source:            READYCPU (PAD)
+  Destination:       U1/OUTPUTIN_15 (FF)
+  Destination Clock: U0/CLK rising
+
+  Data Path: READYCPU to U1/OUTPUTIN_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            33   1.218   1.298  READYCPU_IBUF (READYCPU_IBUF)
+     LUT3:I2->O           16   0.704   1.209  U1/Mmux_n02321151 (U1/Mmux_n0232115)
+     LUT4:I0->O            1   0.704   0.424  U1/Mmux_n02328_SW0 (N61)
+     LUT4:I3->O            1   0.704   0.000  U1/Mmux_n02328 (U1/n0232<12>)
+     FD:D                      0.308          U1/OUTPUTIN_12
+    ----------------------------------------
+    Total                      6.569ns (3.638ns logic, 2.931ns route)
+                                       (55.4% logic, 44.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'U0/CLK'
+  Total number of paths / destination ports: 86 / 52
+-------------------------------------------------------------------------
+Offset:              6.720ns (Levels of Logic = 2)
+  Source:            U2/MARC[1]_CLK_DFF_105 (FF)
+  Destination:       ADDRCPU<17> (PAD)
+  Source Clock:      U0/CLK rising
+
+  Data Path: U2/MARC[1]_CLK_DFF_105 to ADDRCPU<17>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             19   0.591   1.085  U2/MARC[1]_CLK_DFF_105 (U2/MARC[1]_CLK_DFF_105)
+     INV:I->O             18   0.704   1.068  U2/MARC[1]_CLK_DFF_105_inv1_INV_0 (U2/MARC[1]_CLK_DFF_105_inv)
+     OBUFT:T->O                3.272          ADDRCPU_17_OBUFT (ADDRCPU<17>)
+    ----------------------------------------
+    Total                      6.720ns (4.567ns logic, 2.153ns route)
+                                       (68.0% logic, 32.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLOCKCPU'
+  Total number of paths / destination ports: 14 / 14
+-------------------------------------------------------------------------
+Offset:              4.310ns (Levels of Logic = 1)
+  Source:            U0/led1_0 (FF)
+  Destination:       LEDCPU1<3> (PAD)
+  Source Clock:      CLOCKCPU rising
+
+  Data Path: U0/led1_0 to LEDCPU1<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              2   0.591   0.447  U0/led1_0 (U0/led1_0)
+     OBUF:I->O                 3.272          LEDCPU1_3_OBUF (LEDCPU1<3>)
+    ----------------------------------------
+    Total                      4.310ns (3.863ns logic, 0.447ns route)
+                                       (89.6% logic, 10.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLOCKCPU
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCKCPU       |    9.281|         |         |         |
+U0/CLK         |   11.316|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock U0/CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCKCPU       |   11.836|         |         |         |
+U0/CLK         |   11.970|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 14.02 secs
+ 
+WARNING:Xst:3152 - You have chosen to run a version of XST which is not the default solution
+   for the specified device family. You are free to use it in order to take
+   advantage of its enhanced HDL parsing/elaboration capabilities. However,
+   please be aware that you may be impacted by  language support differences.
+   This version may also result in circuit performance and device utilization
+   differences for your particular design. You can always revert back to the
+   default XST solution by setting the "use_new_parser" option to value "no" 
+   on the XST command line or in the XST process properties panel.
+--> 
+
+Total memory usage is 239068 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  633 (   0 filtered)
+Number of infos    :   32 (   0 filtered)
+
